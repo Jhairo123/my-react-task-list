@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import Task from "./Task";
 
-export default function TaskList({ msg1, msg2 }) {
-  const lista = ["tarea 1", "tarea 2", "tarea 3", "tarea 4", "tarea 5"];
+export default function TaskList({ msgBtn1, msgBtn2, list }) {
   return (
     <>
+      {/* Header */}
       <div className="contenedorTaskList1">
         <input
           className="grid-item-a"
@@ -12,17 +13,27 @@ export default function TaskList({ msg1, msg2 }) {
           placeholder="Agregar nueva tarea"
         />
         <button className="grid-item-b" id="agregarTarea">
-          {msg1}
+          {msgBtn1}
         </button>
-        {/* <br></br> */}
-
-        {lista.map((tarea, index) => (
-          <Task key={index} mensaje={tarea} />
-        ))}
+        <div className="contenedorTaskList2">
+          {list.map((arrayTarea) => (
+            <Task key={arrayTarea.id} mensaje={arrayTarea.nombre} />
+          ))}
+        </div>
       </div>
       <div>
-        <p>Tienes {lista.length} tarea(s) pendientes</p>
-        <button id="agregarTarea">{msg2}</button>
+        <p>Tienes {list.length} tarea(s) pendientes</p>
+        <button
+          style={{
+            display: "inline-grid",
+            gridTemplateColumns: "18rem",
+            backgroundColor: "red",
+            color: "white",
+          }}
+          id="agregarTar"
+        >
+          {msgBtn2}
+        </button>
       </div>
     </>
   );

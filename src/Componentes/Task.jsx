@@ -4,8 +4,9 @@ export default function Task({ mensaje }) {
   return (
     <div
       style={{
+        display: "inline-block",
+        // height: "2.5rem",
         backgroundColor: "whitesmoke",
-        gridColumn: "1 / span 2",
         borderRadius: "10rem",
       }}
     >

@@ -7,10 +7,22 @@
 
 .contenedorTaskList1 {
   display: inline-grid;
-  grid-template-columns: 15rem;
+  grid-template-columns: 17rem;
 
   column-gap: 0.5rem;
   row-gap: 0.5rem;
+}
+
+.contenedorTaskList2 {
+  display: grid;
+  align-items: stretch;
+  grid-column: 1 / span 2;
+
+  row-gap: 0.5rem;
+
+  height: 14.6rem;
+  overflow: auto;
+
 }
 
 .grid-item-a {
@@ -24,6 +36,8 @@
   grid-row-start: 1;
   border-radius: 10px;
 }
+
+
 
 label {
   text-decoration: none;
