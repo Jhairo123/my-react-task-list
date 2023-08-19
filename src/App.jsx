@@ -1,10 +1,11 @@
 import "./App.css";
 import Header from "./Componentes/Header";
 import TaskList from "./Componentes/TaskList";
+
 function App() {
   // Lista es un array de objetos
   const lista = [
-    { id: 1, nombre: "tarea " },
+    { id: 1, nombre: "tarea ", selected: "false" },
     { id: 2, nombre: "tarea " },
     { id: 3, nombre: "tarea " },
     { id: 4, nombre: "tarea " },

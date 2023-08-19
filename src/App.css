@@ -28,7 +28,8 @@
 .grid-item-a {
   grid-column-start: 1;
   grid-row-start: 1;
-  border-radius: 10px
+  border-radius: 10px;
+
 }
 
 .grid-item-b {
