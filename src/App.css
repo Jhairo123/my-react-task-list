@@ -7,6 +7,10 @@
 
 .contenedorTaskList1 {
   display: inline-grid;
+  box-shadow: 2px 2px 5px rgb(85, 85, 85);
+  padding: 10px;
+  grid-column-start: 1;
+  grid-row-end: 2;
   grid-template-columns: 17rem;
 
   column-gap: 0.5rem;
@@ -15,12 +19,20 @@
 
 .contenedorTaskList2 {
   display: grid;
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  box-shadow:
+    0px -5px 5px -5px rgba(85, 85, 85),
+    /* Sombra en el borde superior */
+    0px 5px 5px -5px rgba(85, 85, 85);
+  /* Sombra en el borde inferior */
+  /* box-shadow: 0px 0px 0.5px 0.5px rgb(85, 85, 85); */
   align-items: stretch;
   grid-column: 1 / span 2;
 
   row-gap: 0.5rem;
 
-  height: 14.6rem;
+  height: 12.5rem;
   overflow: auto;
 
 }
@@ -28,8 +40,7 @@
 .grid-item-a {
   grid-column-start: 1;
   grid-row-start: 1;
-  border-radius: 10px;
-
+  border-radius: 10px
 }
 
 .grid-item-b {
@@ -40,12 +51,12 @@
 
 
 
-label {
+.label {
   text-decoration: none;
   /* Inicialmente sin tachar */
 }
 
-input[type="checkbox"]:checked+label {
+input[type="checkbox"]:checked+.label {
   text-decoration: line-through;
   /* Tachar si el checkbox está marcado */
 }
